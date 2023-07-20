@@ -1,0 +1,33 @@
+table{ 
+    border-collapse: collapse; 
+    color: white;
+    margin: auto;
+}
+
+table::before{
+    content: attr(data-name);
+    color: var(--a0);
+    opacity: .5;
+    margin: auto;
+    
+}
+
+tr:nth-child(2n){ background-color: var(--a2); }
+tr:nth-child(2n+1){ background-color: var(--a3); }
+
+tr:first-child{
+    background-color: var(--a5);
+    height: 40px;
+}
+
+td{ padding: 5px 1em;  }
+
+tbody{ box-shadow: 1px 1px 0.5em #00000055; }
+
+.table-invisible td{ opacity: 0.1; }
+
+.sides{
+    display: flex; 
+    gap: 10px;
+    align-items: center;
+}

@@ -1,0 +1,27 @@
+@import url("./css/colors.css");
+@import url("./css/table.css");
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    background-color: var(--a3);
+}
+
+.screen-center, .square-center{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

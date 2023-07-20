@@ -1,0 +1,38 @@
+<main class="square-center">
+    <section>
+
+        <sql>
+            -- Obter todos os pedidos de clientes (caso existam):
+            -- Pedro não fez pedido
+
+            SELECT c.id, c.nome, c.estado, p.id AS pedido_id, p.valor
+            FROM clientes c LEFT JOIN pedidos p 
+            ON c.id = p.cliente_id;
+        </sql>  
+        
+        <section class="side" data-name="pessoas">
+            <div id="tabela" class="table" data-name="clientes">
+                id  ;   nome  ; estado
+                1   ;   João  ; SP
+                2   ;   Maria ; RJ
+                3   ;   Pedro ; MG
+            </div>
+            <div id="tabela" class="table" data-name="pedidos">
+                id ; cliente_id ; valor 
+                1  ; 1          ; 100.00
+                2  ; 2          ; 50.00 
+                3  ; 2          ; 30.00 
+            </div>
+            <img src="./icons/next.svg" >
+            <div id="tabela" class="table" data-name="consulta" cells="[[0,4],[1,4],[2,4],[3,4],[4,4]]" transparency="false">
+                id  ; nome  ; estado ; pedido_id ; valor
+                1	; João	; SP	 ; 1	     ; 100
+                2	; Maria	; RJ	 ; 2	     ; 50
+                2	; Maria	; RJ	 ; 3	     ; 30
+                3	; PEDRO	; MG	 ; NULL	     ; NULL
+            </div>
+        </section>
+
+    </section>
+</main>
+
