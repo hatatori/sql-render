@@ -1,0 +1,28 @@
+<main class="square-center">
+    <section>
+
+        <sql>
+            SELECT 
+            id, 
+            CASE
+                WHEN prod_id = 1 THEN 'som'
+                WHEN prod_id = 2 THEN 'mouse'
+                WHEN prod_id = 3 THEN 'teclado'
+                WHEN prod_id = 4 THEN 'monitor'
+            END nome_produto
+            FROM pedidos
+        </sql>  
+        
+        <section class="side">
+            <div id="tabela" class="table" data-name="pedidos">
+                id  ; nome_produto
+                1   ;	som
+                2   ;	mouse
+                3   ;	teclado
+                4   ;	monitor
+            </div>
+        </section>
+
+    </section>
+</main>
+

@@ -32,3 +32,15 @@ CREATE TABLE vendas(
     venda_data DATE,
     venda_unidade INT
 );
+
+-- p3
+CREATE TABLE produtos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome INT,
+    valor INT
+);
+
+CREATE TABLE pedidos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    produto_id INT
+);

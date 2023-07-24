@@ -1,4 +1,10 @@
 DELETE FROM clientes;
+DELETE FROM produtos;
+DELETE FROM vendas;
+DELETE FROM pessoas;
+DELETE FROM prods;
+DELETE FROM pedidos;
+
 INSERT INTO clientes (cliente_id, cliente_nome, cliente_cel, cliente_pais)
 VALUES
 (1, 'Ethan'      , '+1 2125556789'  , 'US'),
@@ -12,7 +18,6 @@ VALUES
 (9, 'Jack'       , '+61 291234567'  , 'AU'),
 (10, 'Alejandro' , '+52 5512345678' , 'MX');
 
-DELETE FROM produtos;
 INSERT INTO produtos (produto_id, produto_nome, produto_valor)
 VALUES
 (1, 'Leite Integral'       ,  48.69),
@@ -26,7 +31,6 @@ VALUES
 (9, 'Café em Pó'           ,  77.04),
 (10,'Sabonete Líquido'     , 86.85);
 
-DELETE FROM vendas;
 INSERT INTO vendas(venda_id, cliente_id, produto_id, venda_data, venda_unidade)
 VALUES
 (1,  8, 8,  '2023-10-05' ,   10),
@@ -40,8 +44,7 @@ VALUES
 (9,  6, 6,  '2023-09-17'  ,  8),
 (10, 1, 9,  '2023-09-12'  ,  2);
 
-DELETE FROM pessoas;
-INSERT INTO pessoas (pessoa_id, pessoa_nome, pessoa_endereco, pessoa_cidade, pessoa_pais)
+INSERT INTO pessoas (id, nome, endereco, cidade, pais)
 VALUES
 (1, 'Jennifer'	      , 'Main Street'	   , 'Washington'  , 'US'),
 (2, 'Florence'	      , 'High Street'	   , 'Londres'     , 'UK'),
@@ -52,7 +55,22 @@ VALUES
 (7, 'Léa Seydoux'	  , 'Grandes Arcades'  , 'Estrasburgo' , 'FR'),
 (8, 'Mélanie Laurent' , 'Tonneliers'	   , 'Estrasburgo' , 'FR');
 
+INSERT INTO prods(id, nome, valor) 
+VALUES 
+(1, 'som', 2500),
+(2, 'mouse', 80),
+(3, 'teclado', 60),
+(4, 'monitor', 1500);
+
+INSERT INTO pedidos(id, prod_id)
+VALUES 
+(1, 1),
+(2, 2),
+(3, 4);
+
 SELECT * FROM clientes;
 SELECT * FROM produtos;
 SELECT * FROM vendas;
 SELECT * FROM pessoas;
+SELECT * FROM prods;
+SELECT * FROM pedidos;
